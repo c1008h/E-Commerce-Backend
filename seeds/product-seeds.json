@@ -1,0 +1,32 @@
+[
+    {
+        "product_name": "storageboxes",
+        "price": 999.99,
+        "stock": 1,
+        "category_id": 1
+    },
+    {
+        "category_name": "knives",
+        "price": 11.11,
+        "stock": 5,
+        "category_id": 2
+    },
+    {
+        "category_name": "towels",
+        "price": 7.99,
+        "stock": 20,
+        "category_id": 3
+    },
+    {
+        "category_name": "couch",
+        "price": 50.99,
+        "stock": 10,
+        "category_id": 4
+    },
+    {
+        "category_name": "bed",
+        "price": 2000.99,
+        "stock": 900,
+        "category_id": 5
+    }
+]
