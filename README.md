@@ -25,6 +25,7 @@ This NodeJS program allows users to quickly generate a professional README markd
 
 ## Instructions
 
+![Untitled_ Sep 11, 2022 1_40 AM](https://user-images.githubusercontent.com/102135325/189519030-15d14559-49c1-481a-8cb4-2b44d84e6aa8.gif)
 
 
 ### Installation
