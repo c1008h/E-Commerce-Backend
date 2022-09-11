@@ -14,10 +14,11 @@ const producttagSeedData = require('./product-tag-seeds.json');
 const seedAll = async () => {
     await sequelize.sync({ force: true })
 
-    const tag = await Tag.bulkCreate();
-    await seedProducts();
-    await seedTags();
-    await seedProducttags();
+    await Category.bulkCreate(categorySeedData);
+    await Product.bulkCreate(productSeedData);
+    await Tag.bulkCreate(tagSeedData);
+    await Producttag.bulkCreate(producttagSeedData);
+
 
     process.exit(0)
 }

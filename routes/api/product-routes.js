@@ -114,4 +114,23 @@ router.post('/', (req, res) => {
     })
 })
 
+router.delete('/:id', (req, res) => {
+    Product.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbProductData => {
+        if(!dbProductData){
+            res.status(404).json({message: 'This id is not associated to any products'})
+            return;
+        }
+        res.json(dbProductData)
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
+})
+
 module.exports = router;

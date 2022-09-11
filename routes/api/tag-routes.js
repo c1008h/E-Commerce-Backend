@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     }
   });
   
-// GET a tag location
+// GET a tag 
 router.get('/:id', async (req, res) => {
     try {
         const tagData = await Tag.findByPk(req.params.id, {
@@ -29,6 +29,26 @@ router.get('/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// UPDATE
+router.put('/:id', (req, res) => {
+    Tag.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(tagData => {
+        if(!tagData) {
+            res.status(404).json({message: 'This id is not associated to any tags'})
+            return;
+        }
+        res.json(tagData)
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
+})
   
 // CREATE a tag
 router.post('/', async (req, res) => {
@@ -40,7 +60,7 @@ router.post('/', async (req, res) => {
     }
 });
   
-// DELETE a location
+// DELETE a tag
 router.delete('/:id', async (req, res) => {
     try {
         const tagData = await Tag.destroy({

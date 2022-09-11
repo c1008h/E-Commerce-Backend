@@ -5,6 +5,7 @@ const Tag = require('./Tag')
 
 Product.belongsTo(Category, {
     foreignKey: 'category_id',
+    onDelete: 'CASCADE'
 })
 
 Category.hasMany(Product, {
