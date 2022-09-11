@@ -5,16 +5,23 @@ This NodeJS program allows users to quickly generate a professional README markd
 ### Created with:
 - <a href='https://javascript.info/'>JavaScript</a>
 - <a href='https://nodejs.org/en/'>Node JS</a>
-- <a href=''>MySQL2</a>
-- <a href=''>Sequelize</a>
-- <a href=''>dotenv
+- <a href='https://www.npmjs.com/package/mysql2'>MySQL2</a>
+- <a href='https://sequelize.org/'>Sequelize</a>
+- <a href='https://www.npmjs.com/package/dotenv'>Dotenv</a>
 
 
 ## Table of Contents (Optional)
-- [Instructions](#instructions)
-- [Contributions](#contributions)
-- [License](#license)
-- [Contact](#contact)
+- [E-Commerce Backend](#e-commerce-backend)
+  - [Description](#description)
+    - [Created with:](#created-with)
+  - [Table of Contents (Optional)](#table-of-contents-optional)
+  - [Instructions](#instructions)
+    - [Installation](#installation)
+    - [Usage](#usage)
+  - [Contribution](#contribution)
+  - [License](#license)
+  - [Badges](#badges)
+  - [Contact](#contact)
 
 ## Instructions
 
@@ -26,13 +33,18 @@ Use this command line to clone this repo before running the program:
 >`git clone git@github.com:c1008h/E-Commerce-Backend.git`
 
 Open the repo in VSC then open the terminal to that file. Once in the terminal, run `npm init`. Once initualize is finished, run `npm i`. This should install all packages and dependencies that are needed for this app.
-### Usage
-Type `node index.js` into the terminal to run this app. Once the app has started, user will be prompted with a handful of questions to answer. When the questionare is completely filled out, the README.md file will be updated with the user's input. From there, users can copy and paste into whatever README.md file they desire. 
 
-Fun fact, the samplereadme.md was created using this generator. 
+Get into mysql shell by running `mysql -u root -p` then enter password. Enter `db/schema.sql;` to use the database. `exit` when it's completely done loading. 
+
+### Usage
+`npm run seed` to seed the database. Once it's finished seeding, run `npm start` to begin the app.
+
+Once the app is listening on the PORT, can use `insomnia` or `localhost:3001/api` to get request.
+
+Change params to `category` or `tag` or `product` to view certain aspects of the e-commerce store.
 
 ## Contribution
-Feel free to fork my repo and use it as your README generator. 
+Feel free to fork and play with the code yourself to get a better understand. 
 
 ## License
 <details>
